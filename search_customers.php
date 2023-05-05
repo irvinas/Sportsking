@@ -162,6 +162,8 @@ if(isset($_POST['search_customer_btn'])) {
       $result = mysqli_query($conn, $sql);
       $sql = "DELETE FROM customers WHERE CustomerID = $delete_id;";
       $result = mysqli_query($conn, $sql);
+      $sql = "DELETE FROM reviews WHERE CustomerID = $delete_id;";
+      $result = mysqli_query($conn, $sql);
       
       // If deleted successfully, this message will appear. 
       if ($result) {
